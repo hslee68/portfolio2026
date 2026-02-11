@@ -1,0 +1,141 @@
+.journey-section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f3f3f3;
+    color: #262626;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+}
+
+/* --- Main Header Styles --- */
+.journey-header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.journey-header h2 {
+    font-size: min(12vw, 100px);
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-family: 'ChosunKm';
+}
+
+.journey-header h2 span {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.journey-header p {
+    font-size: 16px;
+    color: #a3a3a3;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* --- SVG & Journey Path --- */
+.journey-svg-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.journey-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* --- Milestone Styles --- */
+.milestone-group {
+    pointer-events: none;
+}
+
+.milestone-content-wrapper {
+    display: block;
+    /* 공용 클래스에서는 flex 제거 */
+    white-space: pre-wrap;
+}
+
+.milestone-second {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+
+.milestone-second .milestone-title {
+    white-space: pre-line;
+    /* 줄바꿈 허용 */
+    line-height: 1.2;
+}
+
+.milestone-second .milestone-title {
+    margin-bottom: 0;
+    /* 가로 배치이므로 하단 여백 제거 */
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.milestone-second .milestone-desc-container {
+    max-width: 800px;
+}
+
+.milestone-content-wrapper.start {
+    text-align: left;
+}
+
+.milestone-content-wrapper.end {
+    text-align: right;
+}
+
+.milestone-content-wrapper.middle {
+    text-align: center;
+}
+
+.milestone-title {
+    font-family: 'ChosunKm';
+    font-size: 40px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 24px;
+    /* 👈 타이틀과 설명 사이 간격 24px 조절 */
+    line-height: 1.2;
+}
+
+.milestone-desc-container {
+    color: #d1d1d1;
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Pretendard', sans-serif;
+    word-break: keep-all;
+    font-weight: 300;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}

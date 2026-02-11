@@ -1,0 +1,301 @@
+@charset "utf-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-size: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a img {
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+address,
+em,
+i {
+    font-style: normal;
+}
+
+a:focus,
+button:focus {
+    outline: none;
+}
+
+/* ===================== */
+/* Component Styles */
+/* ===================== */
+
+.me-section {
+    position: relative;
+    width: 100%;
+    min-height: 200vh;
+    background-color: #262626;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.me-expanding-box {
+    position: relative;
+    width: 85vw;
+    height: 150px;
+    background-color: #f3f3f3;
+    border-radius: 40px;
+    will-change: width, height, border-radius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.me-inner-content {
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image-container {
+    width: 90%;
+    margin-bottom: 80px;
+}
+
+.profile-image-container img {
+    width: 95%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.meinfoBox {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    color: #262626;
+    margin-top: 120px;
+    margin-bottom: 200px;
+    /* 300px -> 150px: 하단 콘텐츠(Skill)를 위로 끌어올림 */
+    text-align: left;
+}
+
+.leftBox {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 42px;
+    border-right: 1px solid #262626;
+}
+
+.leftBox .text {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.leftBox .text span {
+    font-family: 'ChosunKm';
+    margin-right: 6px;
+}
+
+.leftBox .infoBox {
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    gap: 48px;
+}
+
+.leftBox .infoBox .name {
+    font-size: 100px;
+    font-weight: 800;
+    font-family: 'ChosunKm';
+    line-height: 1;
+}
+
+.leftBox .smalltextBox p {
+    font-size: 16px;
+    margin: 4px 0;
+    color: #636363;
+}
+
+.rightBox {
+    display: flex;
+    gap: 50px;
+    width: 48%;
+}
+
+.rightBox .leftitem {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.innerBox {
+    display: flex;
+    align-items: flex-start;
+}
+
+.seriftext {
+    font-family: 'ChosunKm';
+    font-size: 30px;
+    font-weight: 500;
+    margin-right: 18px;
+}
+
+.rightBox .leftitem .innerBox:nth-child(2) .seriftext {
+    margin-right: 52px;
+}
+
+.rightBox .leftitem .innerBox .text,
+.rightBox .rightitem .text p {
+    font-size: 16px;
+    color: #636363;
+    padding: 4px;
+}
+
+.rightBox .leftitem .innerBox .text {
+    padding-top: 10px;
+}
+
+.rightBox .rightitem .seriftext {
+    padding-bottom: 30px;
+}
+
+.SkillBox {
+    width: 120%;
+}
+
+.skillText {
+    font-family: 'ChosunKm';
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    color: #262626;
+    text-align: left;
+    width: 80%;
+}
+
+.skill-marquee {
+    width: 100%;
+    overflow: visible;
+    /* 👈 잘림 방지를 위해 overflow를 visible로 변경하거나 영역 확대 */
+    padding: 80px 0;
+    /* 👈 상하 패딩을 늘려 애니메이션 공간 확보 */
+    position: relative;
+}
+
+.skill-track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+}
+
+.skill-item {
+    width: 150px;
+    height: 150px;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-item img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    /* 👈 이미지가 아이템 영역을 넘지 않도록 제한 */
+    object-fit: contain;
+    opacity: 0.85;
+}

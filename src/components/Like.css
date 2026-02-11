@@ -1,0 +1,114 @@
+/* HERO */
+.liked-hero {
+    height: 60vh;
+    background: #262626;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.liked-title {
+    font-size: 100px;
+    color: #f3f3f3;
+    font-family: "ChosunKm";
+    padding-bottom: 45px;
+}
+
+.liked-desc {
+    color: #777;
+}
+
+/* LIKE */
+.like-section {
+    height: 100vh;
+    display: flex;
+    background: #262626;
+    overflow: hidden;
+}
+
+.like-left {
+    position: relative;
+    width: 60%;
+    padding-left: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 150px;
+}
+
+.like-text {
+    font-size: 100px;
+    color: #555;
+    font-family: "ChosunKm";
+    position: relative;
+    z-index: 2;
+    text-align: left;
+}
+
+/* CONCEPT LINES */
+.concept-lines {
+    position: absolute;
+    top: 0;
+    left: 210px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.concept-line {
+    position: absolute;
+}
+
+.line-1 {
+    width: 700px;
+    top: -60px;
+    transform: translateX(-30%);
+}
+
+.line-2 {
+    width: 1000px;
+    top: 550px;
+    transform: translateX(-25%);
+}
+
+/* RIGHT */
+.like-right {
+    width: 40%;
+    position: relative;
+}
+
+.like-card {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 495px;
+    height: 673px;
+    overflow: hidden;
+}
+
+.like-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* CURVE */
+.curve-section {
+    height: 200vh;
+    background: #fff;
+}
+
+/* FOOTER */
+.footer-trigger {
+    height: 100vh;
+}
+
+.footer {
+    height: 100vh;
+    background: #111;
+    overflow: hidden;
+}

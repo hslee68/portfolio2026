@@ -1,0 +1,79 @@
+.about-section {
+    position: relative;
+    /* 🔴 [길이 조절 포인트] 원래 150vh였던 것을 120vh로 줄여 섹션 전체 스크롤 길이를 단축했습니다. */
+    min-height: 100vh;
+    background: #f3f3f3;
+}
+
+.about-mask {
+    position: absolute;
+    left: 0;
+    bottom: -150vh;
+    /* 👈 여백 조절: 이 값을 높이면(예: -100vh) 어두운 배경이 더 빨리 나타납니다 */
+    width: 100%;
+    height: 120vh;
+    /* 👈 여백 조절: bottom과 함께 조절하여 마스크의 전체 높이를 결정합니다 */
+    background: #262626;
+
+    border-top-left-radius: 100% 350px;
+    border-top-right-radius: 100% 350px;
+
+    will-change: transform;
+}
+
+.about-content {
+    position: relative;
+    padding-top: 450px;
+    display: flex;
+    /* 👈 중앙 정렬을 위해 추가 */
+    flex-direction: column;
+    /* 👈 세로 방향 정렬 */
+    align-items: center;
+    /* 👈 이미지와 버튼 중앙 정렬 */
+}
+
+.about-text-image {
+    width: 70vw;
+    margin: 0 auto;
+    /* 👈 위아래 마진 제거 (parent와 버튼에서 관리) */
+    display: block;
+    /* 👈 정렬을 위해 block 설정 */
+    opacity: 0;
+    /* 👈 애니메이션 시작 전 숨김 */
+}
+
+.view-more-btn {
+    all: unset;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 200px;
+    /* 👈 버튼 여백: 이 값을 늘리면 이미지와 버튼 사이가 멀어집니다 */
+    opacity: 0;
+    /* 👈 애니메이션 시작 전 숨김 */
+}
+
+.view-more-btn .label {
+    height: 56px;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #f3f3f3;
+    line-height: 1;
+    background-color: #677C51;
+    border-radius: 50px;
+}
+
+
+.view-more-btn .icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #677C51;
+    border-radius: 50%;
+}

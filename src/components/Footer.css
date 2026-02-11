@@ -1,0 +1,83 @@
+.footer-transition {
+    position: relative;
+    height: 100vh;
+    background: #f3f3f3;
+    overflow: hidden;
+}
+
+/* 기준선 */
+.footer-line {
+    position: absolute;
+    /* relative에서 absolute로 변경하여 레이아웃 영향 최소화 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* footer */
+.site-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #262626;
+    z-index: 2;
+
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* 텍스트 영역 */
+.site-footer .textBox {
+    margin: 120px 100px 0 100px;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-footer .textBox .lefttextBox {
+    width: 30%;
+    /* 간격 확보를 위해 약간 넓힘 */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+}
+
+.site-footer .textBox .righttextBox {
+    text-align: right;
+}
+
+.site-footer h3 {
+    font-size: 30px;
+    font-family: "ChosunKm";
+    margin-bottom: 20px;
+    color: #f3f3f3;
+}
+
+.site-footer p {
+    font-size: 16px;
+    color: #a8a8a8;
+    margin-bottom: 8px;
+}
+
+/* 🔥 이미지 설정 변경 */
+.site-footer img {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    /* transform: translate(-50%, -50%)를 여기서 제거했습니다. GSAP이 담당합니다. */
+
+    z-index: 10;
+    display: block;
+    max-width: 100%;
+    /* 화면 밖으로 나가지 않게 조절 */
+
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+}
