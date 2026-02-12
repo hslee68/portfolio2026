@@ -36,7 +36,8 @@ const projects = [
         subtitle: '경험',
         description: 'Personal Project',
         image: project3,
-        tags: ['Design', 'Mobile']
+        tags: ['Design', 'Mobile'],
+        url: 'https://www.figma.com/proto/3lawl0FnJEnXUGkscRERhz/22.%EC%9D%B4%ED%95%98%EC%8A%B9?page-id=863%3A7982&node-id=1686-11545&viewport=-140%2C159%2C0.15&t=qKoBajfvJe7qcmdg-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1686%3A11545'
     },
     {
         id: 4,
@@ -95,7 +96,10 @@ const Project = () => {
                                     <h3>{project.title}</h3>
                                     <h3>{project.subtitle}</h3>
                                 </div>
-                                <button className="more-project-btn">
+                                <button className="more-project-btn"
+                                    onClick={() => window.open(project.url, "_blank")}
+                                >
+
                                     <span className="label">more project</span>
                                     <span className="icon">
                                         <img src={arrow} alt="" />
