@@ -16,17 +16,19 @@ const projects = [
         id: 1,
         title: '1MILLION DANCE STUDIO',
         subtitle: 'Website Re-Design',
-        description: 'Team Project | 2025.11.26 ~ 2025.12.29',
+        description: '6인 Team Project | 2025.11.26 ~ 2025.12.29 | 기여도 40%',
         image: project1,
-        tags: ['Design', 'Development']
+        tags: ['Design', 'Development'],
+        url: 'https://yunjioh.github.io/1million/'
     },
     {
         id: 2,
         title: 'K-Fandom Project',
         subtitle: 'Virtual Application NOVA',
-        description: 'Team Project | 2026.01.02 ~ 2026.02.26',
+        description: '7인 Team Project | 2026.01.02 ~ 2026.02.26 | 기여도 30%',
         image: project2,
-        tags: ['Design', 'UX/UI']
+        tags: ['Design', 'UX/UI'],
+        url: 'https://tubi-nova.vercel.app/'
     },
     {
         id: 3,

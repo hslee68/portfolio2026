@@ -114,12 +114,12 @@
 }
 
 .project-label {
-    font-size: 14px;
-    color: #999;
+    font-size: 16px;
+    color: #7a7a7a;
     margin-bottom: 16px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    font-family: 'ChosunKm';
+    font-family: 'pretendard';
 }
 
 .project-text h3 {
@@ -130,12 +130,6 @@
     font-family: 'ChosunKm';
 }
 
-.project-description {
-    font-size: 18px;
-    color: #262626;
-    font-family: 'ChosunKm';
-    margin-top: 4px;
-}
 
 /* 버튼 */
 .more-project-btn {

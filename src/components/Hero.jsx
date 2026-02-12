@@ -14,6 +14,7 @@ function Hero() {
     const lineRef = useRef(null);
     const topDotRef = useRef(null);
     const bottomDotRef = useRef(null);
+    const smallTextRef = useRef(null);
     const textRef1 = useRef(null);
     const textRef2 = useRef(null);
     const textRef3 = useRef(null);
@@ -72,6 +73,7 @@ function Hero() {
 
             tl
                 .to(textRef1.current, { opacity: 0, duration: 8 })
+                .to(smallTextRef.current, { opacity: 0, duration: 8 })
 
                 .to(
                     circleRef.current,
@@ -199,6 +201,7 @@ function Hero() {
                         <circle ref={circleRef} cx="960" cy="480" r="400" fill="#f3f3f3" />
                         <path ref={lineRef} d="M960 0V850" stroke="#f3f3f3" strokeWidth="3" strokeLinecap="round" />
                         <text ref={textRef1} x="960" y="690" textAnchor="middle" dominantBaseline="middle" fill="#262626" fontFamily="Pretendard" fontSize="85" fontWeight="700" > 연결합니다. </text>
+                        <text ref={smallTextRef} x="960" y="820" textAnchor="middle" dominantBaseline="middle" fill="#262626" fontFamily="Pretendard" fontSize="16" fontWeight="300" > scroll down </text>
 
                         <circle ref={topDotRef} cx="960" cy="880" r="4" fill="#f3f3f3" />
                         <text ref={textRef2} x="960" y="1000" textAnchor="middle" fill="#f3f3f3" fontFamily="Pretendard" fontSize="85" fontWeight="600" > 이어집니다. </text>
